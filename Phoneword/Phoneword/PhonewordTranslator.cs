@@ -11,22 +11,22 @@ public static class PhonewordTranslator
 
         raw = raw.ToUpperInvariant();
 
-        var newNumber = new StringBuilder();
+        var newNbr = new StringBuilder();
         foreach (var c in raw)
         {
             if (" -0123456789".Contains(c))
-                newNumber.Append(c);
+                newNbr.Append(c);
             else
             {
                 var result = TranslateToNumber(c);
                 if (result != null)
-                    newNumber.Append(result);
+                    newNbr.Append(result);
                 // Bad character?
                 else
                     return null;
             }
         }
-        return newNumber.ToString();
+        return newNbr.ToString();
     }
 
     static bool Contains(this string keyString, char c)
