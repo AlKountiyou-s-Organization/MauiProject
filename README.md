@@ -1,1 +1,1 @@
-# .net MAUI microsoft learn#MK MauiProject
+#MK MauiProject
